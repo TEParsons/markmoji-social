@@ -1,0 +1,15 @@
+# test suite artefacts
+tests/artefacts
+.pytest_cache
+# python environment stuff
+.venv*
+venv*
+__pycache__
+# python packaging stuff
+build
+*.egg-info
+# Google Drive gunk
+desktop.ini
+# VS Code config
+.vscode
+*.code-workspace

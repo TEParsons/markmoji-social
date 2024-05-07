@@ -1,0 +1,33 @@
+[project]
+name = "markmoji-social"
+version = "0.0.0" 
+description = "Adds Markmoji handlers for social media embeds."
+authors = [
+  { name = "Todd Parsons", email = "todd.e.parsons@gmail.com" },
+]
+license = { text = "CC" }
+
+dependencies = [
+  "markmoji",
+]
+
+[project.optional-dependencies]
+# dependencies for building the docs
+docs = [
+  "markmoji",
+  "mkdocs",
+]
+# dependencies for running the test suite
+tests = [
+  "markmoji",
+  "pytest",
+]
+
+[project.entry-points."markmoji.handlers"]
+# insert handlers into Markmoji
+FacebookPostHandler = "markmoji_social.handlers:FacebookPostHandler"
+InstagramPostHandler = "markmoji_social.handlers:InstagramPostHandler"
+LinkedInPostHandler = "markmoji_social.handlers:LinkedInPostHandler"
+TootHandler = "markmoji_social.handlers:TootHandler"
+TumblrPostHandler = "markmoji_social.handlers:TumblrPostHandler"
+TweetHandler = "markmoji_social.handlers:TweetHandler"
